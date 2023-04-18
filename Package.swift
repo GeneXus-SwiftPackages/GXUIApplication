@@ -16,13 +16,13 @@ let package = Package(
 		.target(name: "GXUIApplicationWrapper",
 				dependencies: [
 					"GXUIApplication",
-					.product(name: "GXCoreUI", package: "GXCoreUI", condition: .when(platforms: [.iOS, .tvOS]))
+					.product(name: "GXCoreUI", package: "GXCoreUI", condition: .when(platforms: [.tvOS, .iOS]))
 				],
 				path: "Sources"),
 		.binaryTarget(
 			name: "GXUIApplication",
-			url: "https://pkgs.genexus.dev/iOS/beta/GXUIApplication-1.0.0-beta+20230414101841.xcframework.zip",
-			checksum: "b27f8d02ce216e3471382421064c00a2aa39dc07b79154988c0c63cec50417a1"
+			url: "https://pkgs.genexus.dev/iOS/beta/GXUIApplication-1.0.0-beta+20230418130717.xcframework.zip",
+			checksum: "1c933e4e7f6c3b2948adf2f78e12fbee5cc83c7f7e0e261353c91957d70575ae"
 		)
 	]
 )
