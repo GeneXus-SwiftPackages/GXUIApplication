@@ -21,8 +21,8 @@ let package = Package(
 				path: "Sources"),
 		.binaryTarget(
 			name: "GXUIApplication",
-			url: "https://pkgs.genexus.dev/iOS/beta/GXUIApplication-1.0.0-beta+20230503131704.xcframework.zip",
-			checksum: "742d2d4f9f56f2387892faad79dec0c6ad5277c4577cc0d3c26cc20e5b39bb30"
+			url: "https://pkgs.genexus.dev/iOS/beta/GXUIApplication-1.0.0-beta+20230503140111.xcframework.zip",
+			checksum: "3373628cf973fc2b2a7eaff0d552eb58859fa0e2723156caffbf6986b5d62262"
 		)
 	]
 )
