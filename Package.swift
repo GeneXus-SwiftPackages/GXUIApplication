@@ -1,28 +1,28 @@
-// swift-tools-version: 5.7
+// swift-tools-version: 5.9
 import PackageDescription
 
 let package = Package(
 	name: "GXUIApplication",
-	platforms: [.iOS("12.0"), .tvOS("12.0")],
+	platforms: [.iOS("12.0"), .tvOS("12.0"), .visionOS("1.0")],
 	products: [
 		.library(
 			name: "GXUIApplication",
 			targets: ["GXUIApplicationWrapper"])
 	],
 	dependencies: [
-		.package(url: "https://github.com/GeneXus-SwiftPackages/GXCoreUI.git", exact: "1.1.0")
+		.package(url: "https://github.com/GeneXus-SwiftPackages/GXCoreUI.git", exact: "2.0.0-rc.22")
 	],
 	targets: [
 		.target(name: "GXUIApplicationWrapper",
 				dependencies: [
 					"GXUIApplication",
-					.product(name: "GXCoreUI", package: "GXCoreUI", condition: .when(platforms: [.tvOS, .iOS]))
+					.product(name: "GXCoreUI", package: "GXCoreUI", condition: .when(platforms: [.iOS, .tvOS, .visionOS]))
 				],
 				path: "Sources"),
 		.binaryTarget(
 			name: "GXUIApplication",
-			url: "https://pkgs.genexus.dev/iOS/releases/GXUIApplication-1.1.0.xcframework.zip",
-			checksum: "9dfe1d20027ea86ce1f806013130f6324caafc28ad582b204799ed4bfd015286"
+			url: "https://pkgs.genexus.dev/iOS/preview/GXUIApplication-2.0.0-rc.22.xcframework.zip",
+			checksum: "16792a938d54b3ca0efe32c194d7f566d59c85625b5fdb2e19669bc35d1f0bcc"
 		)
 	]
 )
