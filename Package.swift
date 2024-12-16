@@ -3,14 +3,14 @@ import PackageDescription
 
 let package = Package(
 	name: "GXUIApplication",
-	platforms: [.iOS("12.0"), .tvOS("12.0"), .visionOS("1.0")],
+	platforms: [.iOS("13.0"), .tvOS("13.0"), .visionOS("1.0")],
 	products: [
 		.library(
 			name: "GXUIApplication",
 			targets: ["GXUIApplicationWrapper"])
 	],
 	dependencies: [
-		.package(url: "https://github.com/GeneXus-SwiftPackages/GXCoreUI.git", exact: "2.2.0-beta.21")
+		.package(url: "https://github.com/GeneXus-SwiftPackages/GXCoreUI.git", exact: "2.2.0-beta.24")
 	],
 	targets: [
 		.target(name: "GXUIApplicationWrapper",
@@ -21,8 +21,8 @@ let package = Package(
 				path: "Sources"),
 		.binaryTarget(
 			name: "GXUIApplication",
-			url: "https://pkgs.genexus.dev/iOS/beta/GXUIApplication-2.2.0-beta.21.xcframework.zip",
-			checksum: "7c3a7d7ae55cde1a1572731a1950e56415d85d2685e1b6600323158e72309686"
+			url: "https://pkgs.genexus.dev/iOS/beta/GXUIApplication-2.2.0-beta.24.xcframework.zip",
+			checksum: "fec5db5c2f6e30e5803b11dc23f266434b2c44025e13d1b11e2b60976eeca8e3"
 		)
 	]
 )
